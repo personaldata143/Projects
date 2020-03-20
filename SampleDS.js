@@ -19,11 +19,6 @@ function SampleDS (apiKey) {
 
 SampleDS.prototype.search = function(q) {
 
-  var result = {};
-   
- 
-  return result;
-
 }
 
 
