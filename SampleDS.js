@@ -22,16 +22,10 @@ SampleDS.prototype.search = function(q) {
   var resultJson = http().get(baseurl + encodeURIComponent(q) + "?key=" + this.apikey );
   var res = JSON.parse(resultJson.body);
   var result = {}
-    
-    
-  if (res["0"].meta.id !== undefined)
-  {
-      result['word'] = res["0"].meta.id;
-  }
+   
+  result['rain'] = "No rain";
+ 
 
-      result['rain'] = "No rain";
-  
-    
   return result;
 
 }
