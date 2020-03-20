@@ -28,10 +28,9 @@ SampleDS.prototype.search = function(q) {
   {
       result['word'] = res["0"].meta.id;
   }
-  else 
-  {
+
       result['rain'] = "No rain";
-  }
+  
     
   return result;
 
