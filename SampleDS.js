@@ -23,8 +23,9 @@ SampleDS.prototype.search = function(q) {
   var result = {};
     
   if (res.id !== undefined)
-      result['id'] = res['id'];
+      result['id'] = res['id'] 
+  if (res["0"].meta.id !== undefined)
+      result['word'] = res["0"].meta.id;
     
-
   return result;
 }
