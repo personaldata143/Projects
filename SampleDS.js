@@ -16,6 +16,7 @@ SampleDS.prototype.search = function(q) {
   result['word'] = res["0"].meta.id;
     
   result['rain'] = "No rain";
+  result['TEST'] = "tEST";
  
   return result;
 
