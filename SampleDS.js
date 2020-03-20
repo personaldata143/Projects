@@ -21,7 +21,7 @@ SampleDS.prototype.search = function(q) {
     
   var resultJson = http().get(baseurl + encodeURIComponent(q) + "?key=" + this.apikey );
   var res = JSON.parse(resultJson.body);
-  var result = {}
+  var result = {};
    
   result['rain'] = "No rain";
  
