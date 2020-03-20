@@ -28,6 +28,10 @@ SampleDS.prototype.search = function(q) {
   var result = {};
   if (res.id !== undefined)
       result['id'] = res['id'];
+  if (res.title !== undefined)
+      result['title'] = res['title'];
+  if (res.id !== undefined)
+      result['completed'] = res['completed'];
   if (res.name !== undefined)
       result['location'] = res['name'];
   if (res.weather !== undefined) {
