@@ -21,38 +21,12 @@ SampleDS.prototype.search = function(q) {
   var resultJson = http().get(baseurl + encodeURIComponent(q) + "?key="+ this.apikey';);
   var res = JSON.parse(resultJson.body);
   var result = {};
+    
+    
   if (res.id !== undefined)
       result['id'] = res['id'];
-  if (res['0']['meta']['id'] !== undefined)
-      result['completed'] = res[0].meta.id;
-  if (res.title !== undefined)
-      result['title'] = res['title'];
-  if (res.id !== undefined)
-      result['completed'] = res['completed'];
-  if (res.name !== undefined)
-      result['location'] = res['name'];
-  if (res.weather !== undefined) {
-      result['conditions'] = res.weather[0]['main'];
-      result['detail'] = res.weather[0]['description'];
-      result['icon'] = "http://openweathermap.org/img/w/" + res.weather[0]['icon'] + ".png";
-  };
-  if (res.main !== undefined) {
-      result['temperature'] = res.main['temp'];
-      result['humidity'] = res.main['humidity'];
-      result['pressure'] = res.main['pressure'];
-  };
-  if (res.wind !== undefined)
-      result['windspeed'] = res.wind['speed'];
-  if (res.clouds !== undefined)
-      result['clouds'] = res.clouds['all'];
-  if (res.rain !== undefined) {
-      result['rain'] = res.rain['3h'];
-} else {
-      result['rain'] = "No rain";
-}
-  if (res.sys !== undefined) {
-      result['sunrise'] = res.sys['sunrise'];
-      result['sunset'] = res.sys['sunset'];
-  };
+
+
+
   return result;
 }
