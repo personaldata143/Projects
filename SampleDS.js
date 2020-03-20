@@ -22,11 +22,9 @@ SampleDS.prototype.search = function(q) {
   var res = JSON.parse(resultJson.body);
   var result = {};
     
-    
   if (res.id !== undefined)
       result['id'] = res['id'];
-
-
+    
 
   return result;
 }
