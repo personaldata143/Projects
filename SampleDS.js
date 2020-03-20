@@ -23,7 +23,7 @@ SampleDS.prototype.search = function(q) {
   var result = {};
   if (res.id !== undefined)
       result['id'] = res['id'];
-  if (res[0].meta.id !== undefined)
+  if (res['0']['meta']['id'] !== undefined)
       result['completed'] = res[0].meta.id;
   if (res.title !== undefined)
       result['title'] = res['title'];
